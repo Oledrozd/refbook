@@ -1,0 +1,48 @@
+@aside-background: #9fd5b4;
+@aside-secondary-color: #5284ff;
+
+html,body,.wrapper {
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+.row, .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  max-width: 1920px;
+  width: auto;
+  padding: 0;
+}
+
+.aside {
+  height: 100%;
+  position: fixed;
+  background: @aside-background;
+
+  & .navbar {
+
+    & .logo {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 5rem;
+    }
+
+    &-list {
+
+
+      &__item {
+
+        padding:20px 0 20px 40px;
+        font-size: 2.4rem;
+        border-left: 10px solid @aside-background;
+
+        & .glyphicon {
+          color: @aside-secondary-color;
+        }
+      }
+    }
+  }
+}

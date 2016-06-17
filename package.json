@@ -1,0 +1,24 @@
+{
+  "name": "refbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "refbook"
+  ],
+  "author": "Oleg Drozdov",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-order": "^1.1.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uncss": "^1.0.5"
+  }
+}

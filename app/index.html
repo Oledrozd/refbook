@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>refbook</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/paper.min.css">
+
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body class="container-fluid">
+        <div class="wrapper container">
+            <div class="row">
+                <aside class="aside col-lg-2">
+                    <nav class="navbar">
+                        <div class="logo">refbook</div>
+                        <ul class="navbar-list">
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>My Appointments</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>Availability</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Contacts</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>Resources</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Schedule</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Communication</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>Reports</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Settings</li>
+                            <li class="navbar-list__item"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Administrator</li>
+
+                        </ul>
+                    </nav>
+                </aside>
+
+                <div class="col-lg-offset-2 col-lg-10 content">
+
+                    <header class="header row">
+                        <div class="user-panel col-lg-4 col-lg-offset-8">
+
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+
+                            <div class="user-info">
+                                <div class="user-info__photo"></div>
+                                <div class="user-info__name">Jon Chapman</div>
+                                <div class="user-info__position">Referee</div>
+                            </div>
+
+                            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        </div>
+                    </header>
+
+                    <main class="main">
+                        <div class="main__username">Hello Jon!</div>
+
+                        <div class="row">
+                            <div class="appointments-table col-lg-12">
+                                <table class="table table-hover ">
+
+                                    <caption>Upcoming appointments (next 7 days)</caption>
+
+                                    <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>League</th>
+                                        <th>Division</th>
+                                        <th>Round</th>
+                                        <th>Home</th>
+                                        <th>Away</th>
+                                        <th>Venue</th>
+                                        <th>Officials</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="appointments-table__date">
+                                            <div class="date">29.12.2015</div>
+                                            <div class="date-ago">29.12.2015</div>
+                                        </td>
+                                        <td class="appointments-table__time">3:00pm</td>
+                                        <td class="appointments-table__league">
+                                            <img src="" alt="" />
+                                        </td>
+                                        <td class="appointments-table__division">MEN</td>
+                                        <td class="appointments-table__round">12</td>
+                                        <td class="appointments-table__home">
+                                            <img src="" alt="" />
+                                            Berdigo Braves
+                                        </td>
+                                        <td class="appointments-table__away">
+                                            <img src="" alt="" />
+                                            Frankston Blues
+                                        </td>
+                                        <td class="appointments-table__venue">Bendigo Basketball Stadium</td>
+                                        <td class="appointments-table__officials">
+                                            <ul>
+                                                <li><span>R:</span> J. Chapman</li>
+                                                <li><span>U1:</span> R. Manhire</li>
+                                                <li><span>U2:</span> T. Earle</li>
+                                                <li><span>RC:</span> P. Carey</li>
+                                            </ul>
+
+                                            <div class="block-alert">
+                                                C
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="alerts-block col-lg-4">
+                                <div class="block-title">
+                                    <div class="block-title__title">Alerts</div>
+                                    <div class="block-title__alerts">
+                                        <div class="block-alert">5</div>
+                                        <div class="block-alert">2</div>
+                                    </div>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        <div class="block-alert">N</div>
+                                        <div class="alerts-block__title">
+                                            New website for Symu.co
+                                            <div class="date">5 days delays</div>
+                                        </div>
+
+                                        <div class="options"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="block-alert">N</div>
+                                        <div class="alerts-block__title">
+                                            New website for Symu.co
+                                            <div class="date">5 days delays</div>
+                                        </div>
+
+                                        <div class="options"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="block-alert">N</div>
+                                        <div class="alerts-block__title">
+                                            New website for Symu.co
+                                            <div class="date">5 days delays</div>
+                                        </div>
+
+                                        <div class="options"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="block-alert">N</div>
+                                        <div class="alerts-block__title">
+                                            New website for Symu.co
+                                            <div class="date">5 days delays</div>
+                                        </div>
+
+                                        <div class="options"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></div>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="commissioner-messages-block col-lg-4">
+                                <div class="block-title">
+                                    <div class="block-title__title">Commissioner messages</div>
+                                    <div class="block-title__alerts">
+                                        <div class="block-alert">2</div>
+                                    </div>
+                                </div>
+
+                                <ul>
+
+                                    <li>
+                                        <div class="block-photo">
+                                            <img src="" alt="" />
+                                        </div>
+                                        <div class="block-userinfo">
+                                            <div class="block-userinfo__name">
+                                                Nina Jones <span class="time-ago">5 minutes ago</span>
+                                            </div>
+                                            <div class="block-userinfo__message">
+                                                Hey You! It's me again:-) I attached new (...)
+                                            </div>
+
+                                            <div class="block-userinfo__settings">
+                                                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </main>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    <!--Angularjs adding module-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+
+    <!--Angularjs adding components-->
+    <script src="app.js"></script>
+
+
+
+    </body>
+</html>
