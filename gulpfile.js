@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
-    order = require('gulp-order');
+    concat = require('gulp-concat');
+    //order = require('gulp-order');
     //uncss = require('gulp-uncss');
 
     ////js
@@ -17,10 +17,10 @@ gulp.task('css', function() {
             cascade: false
         }))
 
-        .pipe(order([
-            'src/styles/main.css',
-            'src/styles/reset.css'
-        ]))
+        //.pipe(order([
+        //    'src/styles/main.css',
+        //    'src/styles/reset.css'
+        //]))
 
         //.pipe(uncss({
         //    html: ['public/*.html'],
