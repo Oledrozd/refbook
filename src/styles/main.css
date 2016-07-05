@@ -109,7 +109,7 @@ html {
   position: relative;
 }
 .login-form .login-emphasize {
-  color: #f26522;
+  color: #f26624;
 }
 .login-form-block {
   position: absolute;
@@ -118,10 +118,10 @@ html {
   top: 50%;
   left: 50%;
   margin: -425px 0 0 -600px;
-  background: #f6f7fa;
+  background: #363636;
 }
 .login-form-block__header {
-  background: #a1a1a1;
+  background: #ffffff;
 }
 .login-form-block__header .logo,
 .login-form-block__header .login-status {
@@ -129,10 +129,9 @@ html {
   vertical-align: middle;
 }
 .login-form-block__header .logo {
-  color: #000000;
-  font-family: 'Century Gothic', sans-serif;
-  font-size: 5.7rem;
-  text-align: center;
+  background: url("../images/refbook-logo-final.png") no-repeat center center;
+  height: 124px;
+  background-size: 80%;
 }
 .login-form-block__header .login-status-list {
   width: 50%;
@@ -148,17 +147,20 @@ html {
   display: inline-block;
   font-size: 2.4rem;
   font-weight: 500;
-  color: #ffffff;
-  border-bottom: 10px solid #a1a1a1;
+  color: #000000;
+  border-bottom: 10px solid #ffffff;
   cursor: pointer;
   transition: .5s;
 }
 .login-form-block__header .login-status-item.active,
 .login-form-block__header .login-status-item:hover {
-  border-color: #f26522;
+  border-color: #f26624;
+}
+.login-form-block__header .login-status-item.active {
+  float: right;
 }
 .login-form-block__form .form__title {
-  color: #a1a1a1;
+  color: #ffffff;
   font-size: 4.8rem;
   font-weight: lighter;
   margin: 100px 0;
@@ -177,41 +179,41 @@ html {
   font-weight: lighter;
   padding-left: 70px;
   width: 100%;
-  background: #f6f7fa;
-  color: #a1a1a1;
+  background: #363636;
+  color: #ffffff;
   outline: none;
-  border-bottom: 1px solid #d4d9e3;
+  border-bottom: 1px solid #373737;
   margin-bottom: 50px;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
 .login-form-block__form .form__block .form-input:focus {
   box-shadow: none;
-  border-bottom: 1px solid #f26522;
+  border-bottom: 1px solid #f26624;
 }
 .login-form-block__form .form__block .form-input::-webkit-input-placeholder {
-  color: #f26522;
+  color: #ffffff;
 }
 .login-form-block__form .form__block .form-input::-moz-placeholder {
-  color: #f26522;
+  color: #ffffff;
 }
 .login-form-block__form .form__block .form-input:-moz-placeholder {
-  color: #f26522;
+  color: #ffffff;
 }
 .login-form-block__form .form__block .form-input:-ms-input-placeholder {
-  color: #f26522;
+  color: #ffffff;
 }
 .login-form-block__form .form__block .form-input + .glyphicon {
   position: absolute;
   left: 20px;
   top: 10px;
-  color: #5384ff;
+  color: #f26624;
   font-size: 2rem;
 }
 .login-form-block__form .form__block .form-button {
   font-size: 2.4rem;
   font-weight: bold;
-  background: #f26522;
+  background: #f26624;
   border: none;
   border-radius: 40px;
   outline: none;
@@ -221,6 +223,7 @@ html {
   width: 320px;
   box-sizing: border-box;
   position: relative;
+  text-transform: uppercase;
 }
 .login-form-block__form .form__block .form-button .glyphicon {
   font-size: 1.4rem;
@@ -237,14 +240,10 @@ html {
   padding: 20px 0;
 }
 .aside .logo__link {
-  font-family: 'Century Gothic', sans-serif;
-  color: #ffffff;
-  font-size: calc(2rem + 2vw);
-  line-height: normal;
-}
-.aside .logo__link:hover,
-.aside .logo__link:focus {
-  text-decoration: none;
+  background: url("../images/refbook-logo-final.png") no-repeat center center;
+  background-size: 78%;
+  height: 60px;
+  display: block;
 }
 .aside .btn-menu {
   font-size: 3rem;
@@ -276,12 +275,13 @@ html {
 .aside .navbar-list__item:not(:last-child) {
   border-bottom: 2px solid #4a4849;
 }
-.aside .navbar-list__item:hover {
+.aside .navbar-list__item:hover,
+.aside .navbar-list__item:active {
   background: #7da7d9;
-  border-left: 10px solid #5284ff;
+  border-left: 10px solid #f26624;
 }
 .aside .navbar-list__item .glyphicon {
-  color: #5284ff;
+  color: #f26624;
   font-size: calc(1rem + .5vw);
   margin-right: 20px;
 }
@@ -621,11 +621,8 @@ html {
     margin: -250px 0 0 -470px;
   }
   .login-form-block__form .form__title {
-    color: #a1a1a1;
     font-size: 4.8rem;
-    font-weight: lighter;
     margin: 10px 0;
-    text-align: center;
   }
   .login-form-block__form .form__block .form-input {
     margin-bottom: 20px;
@@ -650,13 +647,13 @@ html {
     margin: -225px 0 0 -350px;
   }
   .login-form-block__header .logo {
-    font-size: 4.7rem;
+    height: 90px;
   }
   .login-form-block__header .login-status-item {
     width: 49%;
     padding: 25px 0;
     font-size: 2rem;
-    border-bottom: 5px solid #a1a1a1;
+    border-bottom: 5px solid #ffffff;
   }
   .login-form-block__form .form__title {
     font-size: 4.8rem;
@@ -698,9 +695,7 @@ html {
     margin: -150px 0 0 -200px;
   }
   .login-form-block__header .logo {
-    font-size: 2.7rem;
-    padding: 25px 0;
-    line-height: normal;
+    height: 80px;
   }
   .login-form-block__header .login-status-item {
     width: 48%;
@@ -771,6 +766,9 @@ html {
     top: 50%;
     left: 50%;
     margin: -150px 0 0 -150px;
+  }
+  .login-form-block__header .logo {
+    height: 75px;
   }
   .login-form-block__header .login-status-item {
     font-size: 1.3rem;

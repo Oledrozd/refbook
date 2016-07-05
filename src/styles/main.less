@@ -1,11 +1,15 @@
 @aside-background: #514e4f;
-@aside-secondary-color: #5284ff;
+@aside-secondary-color: #f26624;
+@old-aside-secondary-color: #5284ff;
 @aside-text-color: #ffffff;
 
-@login-form-color: #f26522;
+@login-form-color: #f26624;
+@login-text-color: #ffffff;
+@login-form-background: #363636;
 
 @app-main-color: #000000;
 @app-secondary-color: #8492af;
+
 
 html,body,.wrapper,.login-page,.login-form {
   height: 100%;
@@ -135,10 +139,10 @@ html {
     top: 50%;
     left: 50%;
     margin: -425px 0 0 -600px;
-    background: #f6f7fa;
+    background: @login-form-background;
 
     &__header {
-      background: #a1a1a1;
+      background: @login-text-color;
 
       & .logo, & .login-status {
         display: inline-block;
@@ -146,10 +150,10 @@ html {
       }
 
       & .logo {
-        color: @app-main-color;
-        font-family: 'Century Gothic', sans-serif;
-        font-size: 5.7rem;
-        text-align: center;
+        background: url("../images/refbook-logo-final.png") no-repeat center center;
+        height: 124px;
+        background-size: 80%;
+
       }
 
       & .login-status {
@@ -169,14 +173,17 @@ html {
           display: inline-block;
           font-size: 2.4rem;
           font-weight: 500;
-          color: #ffffff;
-          border-bottom: 10px solid #a1a1a1;
+          color: @app-main-color;
+          border-bottom: 10px solid @login-text-color;
           cursor: pointer;
           transition: .5s;
 
 
           &.active, &:hover {
             border-color: @login-form-color;
+          }
+          &.active {
+            float: right;
           }
         }
 
@@ -186,7 +193,7 @@ html {
     &__form {
 
       & .form__title {
-        color: #a1a1a1;
+        color: @login-text-color;
         font-size: 4.8rem;
         font-weight: lighter;
         margin: 100px 0;
@@ -207,10 +214,10 @@ html {
           font-weight: lighter;
           padding-left: 70px;
           width: 100%;
-          background: #f6f7fa;
-          color: #a1a1a1;
+          background: @login-form-background;
+          color: @login-text-color;
           outline: none;
-          border-bottom: 1px solid #d4d9e3;
+          border-bottom: 1px solid #373737;
           margin-bottom: 50px;
 
           &:focus {
@@ -218,16 +225,16 @@ html {
             border-bottom: 1px solid @login-form-color;
           }
 
-          &::-webkit-input-placeholder {color:@login-form-color;}
-          &::-moz-placeholder          {color:@login-form-color;}/* Firefox 19+ */
-          &:-moz-placeholder           {color:@login-form-color;}/* Firefox 18- */
-          &:-ms-input-placeholder      {color:@login-form-color;}
+          &::-webkit-input-placeholder {color:@login-text-color;}
+          &::-moz-placeholder          {color:@login-text-color;}/* Firefox 19+ */
+          &:-moz-placeholder           {color:@login-text-color;}/* Firefox 18- */
+          &:-ms-input-placeholder      {color:@login-text-color;}
 
           & + .glyphicon {
             position: absolute;
             left: 20px;
             top: 10px;
-            color: #5384ff;
+            color: @login-form-color;
             font-size: 2rem;
           }
         }
@@ -245,6 +252,7 @@ html {
           width: 320px;
           box-sizing: border-box;
           position: relative;
+          text-transform: uppercase;
 
           & .glyphicon {
             font-size: 1.4rem;
@@ -270,14 +278,11 @@ html {
     padding: 20px 0;
 
     &__link {
-      font-family: 'Century Gothic', sans-serif;
-      color: @aside-text-color;
-      font-size: ~'calc(2rem + 2vw)';
-      line-height: normal;
+      background: url("../images/refbook-logo-final.png") no-repeat center center;
+      background-size: 78%;
+      height: 60px;
+      display: block;
 
-      &:hover, &:focus {
-        text-decoration: none;
-      }
     }
   }
 
@@ -316,7 +321,7 @@ html {
         &:not(:last-child) {
           border-bottom: 2px solid #4a4849;
         }
-        &:hover {
+        &:hover, &:active {
           background: #7da7d9;
           border-left: 10px solid @aside-secondary-color;
         }
@@ -746,11 +751,8 @@ html {
       &__form {
 
         & .form__title {
-          color: #a1a1a1;
           font-size: 4.8rem;
-          font-weight: lighter;
           margin: 10px 0;
-          text-align: center;
         }
 
         & .form__block {
@@ -815,7 +817,7 @@ html {
       &__header {
 
         & .logo {
-          font-size: 4.7rem;
+          height: 90px;
         }
 
         & .login-status {
@@ -824,7 +826,7 @@ html {
             width: 49%;
             padding: 25px 0;
             font-size: 2rem;
-            border-bottom: 5px solid #a1a1a1;
+            border-bottom: 5px solid @login-text-color;
           }
 
         }
@@ -893,9 +895,7 @@ html {
       &__header {
 
         & .logo {
-          font-size: 2.7rem;
-          padding: 25px 0;
-          line-height: normal;
+          height: 80px;
         }
 
         & .login-status {
@@ -1019,6 +1019,10 @@ html {
 
       &__header {
 
+        & .logo {
+          height: 75px;
+        }
+
         & .login-status {
 
           &-item {
@@ -1064,3 +1068,4 @@ html {
     }
   }
 }
+
