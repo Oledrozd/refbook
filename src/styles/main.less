@@ -39,6 +39,22 @@ html {
   color: #fff;
   font-weight: normal;
   display: inline-block;
+
+  &_mini {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 1rem;
+    float: right;
+    clear: right;
+  }
+
+  &.bg-info {
+    background: @aside-secondary-color;
+  }
+  &.bg-final {
+    background: @app-secondary-color;
+  }
 }
 .settings-button {
   display: inline-block;
@@ -321,7 +337,7 @@ html {
         &:not(:last-child) {
           border-bottom: 2px solid #4a4849;
         }
-        &:hover, &:active {
+        &:hover, &.active {
           background: #7da7d9;
           border-left: 10px solid @aside-secondary-color;
         }
@@ -498,7 +514,6 @@ html {
 
 
       &__title {
-        padding-left: 40px;
         font-size: 3.6rem;
         font-weight: bold;
         color: @app-secondary-color;
@@ -568,6 +583,12 @@ html {
             float: right;
             padding: 0 10px 0 0;
           }
+        }
+      }
+
+      &__venue {
+        &-map-link {
+          color: @aside-secondary-color;
         }
       }
 

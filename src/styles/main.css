@@ -32,6 +32,20 @@ html {
   font-weight: normal;
   display: inline-block;
 }
+.block-alert_mini {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 1rem;
+  float: right;
+  clear: right;
+}
+.block-alert.bg-info {
+  background: #f26624;
+}
+.block-alert.bg-final {
+  background: #8492af;
+}
 .settings-button {
   display: inline-block;
   vertical-align: middle;
@@ -276,7 +290,7 @@ html {
   border-bottom: 2px solid #4a4849;
 }
 .aside .navbar-list__item:hover,
-.aside .navbar-list__item:active {
+.aside .navbar-list__item.active {
   background: #7da7d9;
   border-left: 10px solid #f26624;
 }
@@ -420,7 +434,6 @@ html {
   margin-bottom: 60px;
 }
 .content .main .table-block__title {
-  padding-left: 40px;
   font-size: 3.6rem;
   font-weight: bold;
   color: #8492af;
@@ -481,6 +494,9 @@ html {
   cursor: pointer;
   float: right;
   padding: 0 10px 0 0;
+}
+.content .main .table-block__venue-map-link {
+  color: #f26624;
 }
 .content .main .alerts-block,
 .content .main .commissioner-messages-block {

@@ -19,7 +19,7 @@
                 
                 <aside class="aside col-lg-2 col-md-2 col-sm-2 col-xs-12">
 
-                    <div class="logo text-center"><a class="logo__link" href="#/"></a></div>
+                    <div class="logo text-center"><a class="logo__link" href="#/home"></a></div>
 
                     <button type="button" class="navbar-toggle btn-menu" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
@@ -28,8 +28,8 @@
                     <nav data-ng-controller="navController" class="navbar navbar-collapse collapse">
 
                         <ul class="navbar-list nav navbar-nav">
-                            <li data-ng-repeat="item in navItems" class="navbar-list__item" onclick="document.querySelector('.navbar').classList.remove('in');">
-                                <a href="{{item.link}}">
+                            <li data-ng-repeat="item in navItems" ng-class="getClass( item.link )" class="navbar-list__item" onclick="document.querySelector('.navbar').classList.remove('in');">
+                                <a href="#{{item.link}}">
                                     <span class="glyphicon {{item.iconClass}}" aria-hidden="true"></span>
                                     {{item.title}}
                                 </a>

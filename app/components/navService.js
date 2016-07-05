@@ -4,13 +4,13 @@ angular.module('refbookApp')
     var navItems = [
 
         {
-            link: '#/home',
+            link: '/home',
             iconClass: 'glyphicon-home',
             title: 'home'
         },
 
         {
-            link: '#/appointments',
+            link: '/appointments',
             iconClass: 'glyphicon-align-justify',
             title: 'my appointments'
         },
@@ -22,45 +22,21 @@ angular.module('refbookApp')
         },
 
         {
-            link: '#/contacts',
+            link: '/contacts',
             iconClass: 'glyphicon-user',
             title: 'contacts'
         },
 
         {
-            link: '#/resources',
+            link: '/resources',
             iconClass: 'glyphicon-picture',
             title: 'resources'
         },
 
         {
-            link: '#/schedule',
+            link: '/competition',
             iconClass: 'glyphicon-list-alt',
-            title: 'schedule'
-        },
-
-        {
-            link: '#',
-            iconClass: 'glyphicon-envelope',
-            title: 'communication'
-        },
-
-        {
-            link: '#/reports',
-            iconClass: 'glyphicon-paperclip',
-            title: 'reports'
-        },
-
-        {
-            link: '#',
-            iconClass: 'glyphicon-cog',
-            title: 'settings'
-        },
-
-        {
-            link: '#',
-            iconClass: 'glyphicon-cog',
-            title: 'administrator'
+            title: 'competition'
         }
 
     ];
