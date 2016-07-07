@@ -1,17 +1,12 @@
 'use strict';
 
-angular.module('refbookApp', [ 'ngRoute']);
+angular.module('refbookApp', [ 'ngRoute', 'ui.sortable' ]);
 
 /*Router settings*/
 angular.module('refbookApp')
     .config(['$routeProvider', function($routeProvider) {
 
         $routeProvider
-
-            //.when('/', {
-            //    templateUrl: 'components/login.component/login.tmpl.html',
-            //    controller: 'loginController'
-            //})
 
             .when('/appointments', {
                 templateUrl: 'components/appointments.component/appointments.tmpl.html',
@@ -21,6 +16,11 @@ angular.module('refbookApp')
             .when('/contacts', {
                 templateUrl: 'components/contacts.component/contacts.tmpl.html',
                 //controller: 'contactsController'
+            })
+
+            .when('/availability', {
+                templateUrl: 'components/availability.component/availability.tmpl.html',
+                controller: 'availabilityController'
             })
 
             .when('/home', {

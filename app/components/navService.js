@@ -16,7 +16,7 @@ angular.module('refbookApp')
         },
 
         {
-            link: '#',
+            link: '/availability',
             iconClass: 'glyphicon-calendar',
             title: 'availability'
         },
