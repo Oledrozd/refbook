@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('refbookApp', [ 'ngRoute', 'ui.sortable' ]);
+angular.module('refbookApp', [ 'ngRoute', 'ui.sortable', 'ngMaterial', 'materialCalendar' ]);
 
 /*Router settings*/
 angular.module('refbookApp')
