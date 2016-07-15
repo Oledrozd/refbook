@@ -630,9 +630,6 @@ html {
   text-align: center;
   margin: 200px 0 50px 0;
 }
-.layout-row {
-  height: 8vw;
-}
 @media screen and (max-width: 1600px) {
   .login-form-block {
     width: 940px;
