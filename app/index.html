@@ -114,7 +114,7 @@
                             </form>
                         </div>
 
-                        <div class="login-form-block__form" ng-show="loginTab === 2">
+                        <div class="login-form-block__form login-form-block__form_register" ng-show="loginTab === 2">
                             <div class="form__title">
                                 Register Here! <span class="login-emphasize">It’s free to join</span>
                             </div>
@@ -122,43 +122,37 @@
 
                                 <div class="form-group">
                                     <input class="form-input" ng-model="registerData.firstname" type="text" class="form-control" placeholder="First Name">
-                                    <span class="glyphicon glyphicon-user" data-target="true"></span>
                                 </div>
 
                                 <div class="form-group">
                                     <input class="form-input" ng-model="registerData.surname" type="text" class="form-control" placeholder="Surname">
-                                    <span class="glyphicon glyphicon-lock" data-target="true"></span>
                                 </div>
 
                                 <div class="form-group">
                                     <input class="form-input" ng-model="registerData.email" type="email" class="form-control" placeholder="Email">
-                                    <span class="glyphicon glyphicon-lock" data-target="true"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <input class="form-input" ng-model="registerData.mobile" type="tel" class="form-control" placeholder="mobile">
-                                    <span class="glyphicon glyphicon-lock" data-target="true"></span>
+                                    <input class="form-input" ng-model="registerData.mobile" type="tel" class="form-control" placeholder="Mobile">
                                 </div>
 
                                 <div class="form-group">
-                                    <select class="form-input form-control" ng-model="registerData.country">
-                                        <option>Some Country</option>
+                                    <select class="form-input form-control">
+                                        <option selected>Austrlalia</option>
                                         <option>Some Country</option>
                                     </select>
-                                    <span class="glyphicon glyphicon-lock" data-target="true"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <select class="form-input form-control" ng-model="registerData.region">
-                                        <option>Some State</option>
+                                    <select class="form-input form-control">
+                                        <option selected>Vic</option>
                                         <option>Some State</option>
                                     </select>
-                                    <span class="glyphicon glyphicon-lock" data-target="true"></span>
                                 </div>
 
                                 <div class="form-group">
                                     <button class="form-button" ng-click=" loginStatus= !loginStatus ">
-                                        Enter
+                                        Registration
                                         <span class="glyphicon glyphicon-menu-right" data-target="true"></span>
                                     </button>
                                 </div>

@@ -196,7 +196,6 @@ html {
   background: #363636;
   color: #ffffff;
   outline: none;
-  border-bottom: 1px solid #373737;
   margin-bottom: 50px;
   /* Firefox 19+ */
   /* Firefox 18- */
@@ -244,6 +243,16 @@ html {
   position: absolute;
   right: 30px;
   top: 22px;
+}
+.login-form-block__form_register .form__title {
+  margin: 60px 0;
+}
+.login-form-block__form_register .form__block .form-input {
+  margin-bottom: 10px;
+  padding-left: 35px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid;
 }
 .aside {
   height: 100%;
@@ -498,6 +507,18 @@ html {
 .content .main .table-block__venue-map-link {
   color: #f26624;
 }
+.content .main .table-legend {
+  text-align: right;
+}
+.content .main .table-legend-list {
+  width: 150px;
+  text-align: left;
+  display: inline-block;
+}
+.content .main .table-legend-list__item {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
 .content .main .alerts-block,
 .content .main .commissioner-messages-block {
   border: 1px solid #d4d9e3;
@@ -626,6 +647,25 @@ html {
   padding: 7px 30px;
   margin: 40px 0;
 }
+.content .main .calendar-block calendar-md md-content > md-content.calendar > :not(:first-child) > * {
+  height: 8vw;
+}
+.content .main .calendar-block md-toolbar.md-default-theme:not(.md-menu-toolbar),
+.content .main .calendar-block md-toolbar:not(.md-menu-toolbar) {
+  background: #f6f7fa;
+}
+.content .main .calendar-block md-toolbar.md-default-theme:not(.md-menu-toolbar) .flex,
+.content .main .calendar-block md-toolbar:not(.md-menu-toolbar) .flex {
+  flex: 0;
+}
+.content .main .calendar-block md-toolbar:not(.md-menu-toolbar) .md-button {
+  color: #000000;
+  font-size: 1.6rem;
+}
+.content .main .calendar-block calendar-md .md-toolbar-tools h2 {
+  overflow-x: inherit;
+  font-size: 3.6rem;
+}
 .content .main .pagination-block {
   text-align: center;
   margin: 200px 0 50px 0;
@@ -645,6 +685,18 @@ html {
   }
   .login-form-block__form .form__block .form-button {
     margin: 20px 0;
+  }
+  .login-form-block__form_register .form-group:not(:last-child) {
+    width: 46%;
+    display: inline-block;
+    margin: 0 1%;
+  }
+  .login-form-block__form_register .form__block {
+    text-align: center;
+  }
+  .login-form-block__form_register .form__block .form-input {
+    margin-bottom: 10px;
+    padding-left: 15px;
   }
   .aside .navbar-list__item a {
     padding: 20px 0 20px 10px;
@@ -733,15 +785,15 @@ html {
     top: 4px;
   }
   .login-form-block__form .form__block .form-button {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     padding: 4px 20px;
     margin: 10px 0;
-    width: 250px;
+    width: 200px;
   }
   .login-form-block__form .form__block .form-button .glyphicon {
     font-size: 1.2rem;
     right: 30px;
-    top: 15px;
+    top: 11px;
   }
   .aside {
     position: relative;
@@ -791,7 +843,7 @@ html {
     padding: 28px 0;
   }
   .login-form-block__form .form__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 10px 0;
   }
   .login-form-block__form .form__block {
@@ -800,6 +852,12 @@ html {
   }
   .login-form-block__form .form__block .form-button {
     width: 150px;
+    font-size: 1.2rem;
+  }
+  .login-form-block__form .form__block .form-button .glyphicon {
+    font-size: 1.2rem;
+    right: 15px;
+    top: 10px;
   }
   .content .header .user-panel .glyphicon {
     margin-right: 15px;
