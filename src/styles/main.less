@@ -221,10 +221,46 @@ html {
       & .form__block {
         width: 580px;
         margin: 0 auto;
+        text-align: center;
+
+        & .form-forgot {
+          text-align: center;
+
+          & a {
+            font-size: 2rem;
+            color: @login-text-color;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+              color: @login-form-color;
+            }
+          }
+        }
 
         & .form-group {
           position: relative;
           text-align: center;
+
+          &__checkbox {
+            width: 46%;
+            margin: 0 1%;
+            display: inline-block;
+            text-align: left;
+
+            & a {
+              font-size: 1.2rem;
+              color: @login-text-color;
+              text-decoration: underline;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+
+              &:hover {
+                color: @login-form-color;
+              }
+            }
+          }
         }
 
         & .form-input {
@@ -236,6 +272,30 @@ html {
           color: @login-text-color;
           outline: none;
           margin-bottom: 50px;
+
+          &__checkbox {
+            display: none;
+
+            & + label {
+              cursor: pointer;
+              position: relative;
+
+              &::before {
+                content: "";
+                display: inline-block;
+                height: 18px;
+                width: 18px;
+                margin: 0 10px 0 0;
+                background: red;
+                position: relative;
+                top: 4px;
+              }
+            }
+
+            &:checked + label:before {
+              background: blue;
+            }
+          }
 
           &:focus {
             box-shadow: none;
@@ -254,6 +314,10 @@ html {
             color: @login-form-color;
             font-size: 2rem;
           }
+        }
+
+        & select.form-input {
+          padding-left: 32px;
         }
 
         & .form-button {
@@ -295,6 +359,7 @@ html {
             font-size: 18px;
             border: none;
             border-bottom: 1px solid;
+            box-shadow: none;
           }
         }
       }
@@ -530,7 +595,7 @@ html {
       font-weight: 500;
       font-size: ~'calc(.6rem + .6vw)';
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 10px;
 
 
       &__title {
@@ -616,6 +681,7 @@ html {
     & .table-legend {
 
       text-align: right;
+      margin-bottom: 40px;
 
       &-list {
         width: 150px;
@@ -793,11 +859,29 @@ html {
     //styles for calendar
 
     & .calendar-block {
+
+      & calendar-md {
+
+      }
+
+      & .calendar {
+        background: #ffffff;
+      }
+
+      & md-toolbar {
+        display: block;
+        width: 400px;
+        position: absolute;
+        right: 420px;
+        margin-bottom: 60px;
+        top: -90px;
+      }
+
       & calendar-md md-content>md-content.calendar>:not(:first-child)>* {
         height: 8vw;
       }
       & md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
-        background: @main-bg;
+        background: none;
 
         & .flex {
           flex: 0;
@@ -811,6 +895,27 @@ html {
       & calendar-md .md-toolbar-tools h2 {
         overflow-x: inherit;
         font-size: 3.6rem;
+      }
+
+      & .subheader-day {
+        text-transform: uppercase;
+
+        //&:not(:last-child) {
+        //  border-right: 1px solid #e1e1e1;
+        //}
+      }
+
+      & .flex {
+        font-size: 1.3rem;
+      }
+
+      & .layout-padding, .layout-padding>.flex, .layout-padding>.flex-gt-sm, .layout-padding>.flex-lt-lg, .layout-padding>.flex-md {
+        padding: 1vw;
+      }
+
+      & .layout-fill {
+        background: none;
+        overflow: inherit;
       }
     }
 
@@ -845,8 +950,12 @@ html {
             margin-bottom: 20px;
           }
 
+          & select.form-input {
+            padding-left: 12px;
+          }
+
           & .form-button {
-            margin: 20px 0;
+            margin: 5px 0;
           }
 
         }
@@ -899,6 +1008,18 @@ html {
 
           }
         }
+      }
+
+      & .calendar-block {
+
+
+        & md-toolbar {
+          position: relative;
+          right: 0;
+          margin-bottom: 0;
+          top: 0;
+        }
+
       }
     }
   }
@@ -1015,7 +1136,7 @@ html {
       &__form {
 
         & .form__title {
-          font-size: 2.8rem;
+          font-size: 1.8rem;
 
           margin: 10px 0;
         }
@@ -1023,6 +1144,10 @@ html {
         & .form__block {
           width: 100%;
           padding: 0 20px;
+
+          & .form-forgot a {
+            font-size: 1.2rem;
+          }
 
           & .form-input {
 
@@ -1038,7 +1163,7 @@ html {
           & .form-button {
             font-size: 1.2rem;
             padding: 4px 20px;
-            margin: 10px 0;
+            margin: 2px 0;
             width: 200px;
 
 
@@ -1105,6 +1230,17 @@ html {
           vertical-align: middle;
         }
       }
+
+      & .calendar-block {
+
+        & md-toolbar {
+          width: 200px;
+        }
+        & md-toolbar .md-toolbar-tools h2 {
+          font-size: 2rem;
+        }
+
+      }
     }
   }
 }
@@ -1115,10 +1251,10 @@ html {
     &-block {
 
       width: 300px;
-      height: 300px;
+      height: 360px;
       top: 50%;
       left: 50%;
-      margin: -150px 0 0 -150px;
+      margin: -180px 0 0 -150px;
 
 
       &__header {
@@ -1147,9 +1283,22 @@ html {
           width: 100%;
           padding: 0 20px;
 
+          & .form-input {
+
+          }
+            & .form-group {
+              position: relative;
+              text-align: center;
+
+              &__checkbox {
+                text-align: center;
+              }
+          }
+
           & .form-button {
             width: 150px;
             font-size: 1.2rem;
+            margin: 10px 0;
 
             & .glyphicon {
               font-size: 1.2rem;

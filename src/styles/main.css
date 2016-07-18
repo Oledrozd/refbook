@@ -183,10 +183,40 @@ html {
 .login-form-block__form .form__block {
   width: 580px;
   margin: 0 auto;
+  text-align: center;
+}
+.login-form-block__form .form__block .form-forgot {
+  text-align: center;
+}
+.login-form-block__form .form__block .form-forgot a {
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login-form-block__form .form__block .form-forgot a:hover {
+  color: #f26624;
 }
 .login-form-block__form .form__block .form-group {
   position: relative;
   text-align: center;
+}
+.login-form-block__form .form__block .form-group__checkbox {
+  width: 46%;
+  margin: 0 1%;
+  display: inline-block;
+  text-align: left;
+}
+.login-form-block__form .form__block .form-group__checkbox a {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.login-form-block__form .form__block .form-group__checkbox a:hover {
+  color: #f26624;
 }
 .login-form-block__form .form__block .form-input {
   font-size: 24px;
@@ -199,6 +229,26 @@ html {
   margin-bottom: 50px;
   /* Firefox 19+ */
   /* Firefox 18- */
+}
+.login-form-block__form .form__block .form-input__checkbox {
+  display: none;
+}
+.login-form-block__form .form__block .form-input__checkbox + label {
+  cursor: pointer;
+  position: relative;
+}
+.login-form-block__form .form__block .form-input__checkbox + label::before {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin: 0 10px 0 0;
+  background: red;
+  position: relative;
+  top: 4px;
+}
+.login-form-block__form .form__block .form-input__checkbox:checked + label:before {
+  background: blue;
 }
 .login-form-block__form .form__block .form-input:focus {
   box-shadow: none;
@@ -222,6 +272,9 @@ html {
   top: 10px;
   color: #f26624;
   font-size: 2rem;
+}
+.login-form-block__form .form__block select.form-input {
+  padding-left: 32px;
 }
 .login-form-block__form .form__block .form-button {
   font-size: 2.4rem;
@@ -253,6 +306,7 @@ html {
   font-size: 18px;
   border: none;
   border-bottom: 1px solid;
+  box-shadow: none;
 }
 .aside {
   height: 100%;
@@ -440,7 +494,7 @@ html {
   font-weight: 500;
   font-size: calc(.6rem + .6vw);
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 .content .main .table-block__title {
   font-size: 3.6rem;
@@ -509,6 +563,7 @@ html {
 }
 .content .main .table-legend {
   text-align: right;
+  margin-bottom: 40px;
 }
 .content .main .table-legend-list {
   width: 150px;
@@ -647,12 +702,23 @@ html {
   padding: 7px 30px;
   margin: 40px 0;
 }
+.content .main .calendar-block .calendar {
+  background: #ffffff;
+}
+.content .main .calendar-block md-toolbar {
+  display: block;
+  width: 400px;
+  position: absolute;
+  right: 420px;
+  margin-bottom: 60px;
+  top: -90px;
+}
 .content .main .calendar-block calendar-md md-content > md-content.calendar > :not(:first-child) > * {
   height: 8vw;
 }
 .content .main .calendar-block md-toolbar.md-default-theme:not(.md-menu-toolbar),
 .content .main .calendar-block md-toolbar:not(.md-menu-toolbar) {
-  background: #f6f7fa;
+  background: none;
 }
 .content .main .calendar-block md-toolbar.md-default-theme:not(.md-menu-toolbar) .flex,
 .content .main .calendar-block md-toolbar:not(.md-menu-toolbar) .flex {
@@ -665,6 +731,23 @@ html {
 .content .main .calendar-block calendar-md .md-toolbar-tools h2 {
   overflow-x: inherit;
   font-size: 3.6rem;
+}
+.content .main .calendar-block .subheader-day {
+  text-transform: uppercase;
+}
+.content .main .calendar-block .flex {
+  font-size: 1.3rem;
+}
+.content .main .calendar-block .layout-padding,
+.content .main .calendar-block .layout-padding > .flex,
+.content .main .calendar-block .layout-padding > .flex-gt-sm,
+.content .main .calendar-block .layout-padding > .flex-lt-lg,
+.content .main .calendar-block .layout-padding > .flex-md {
+  padding: 1vw;
+}
+.content .main .calendar-block .layout-fill {
+  background: none;
+  overflow: inherit;
 }
 .content .main .pagination-block {
   text-align: center;
@@ -683,8 +766,11 @@ html {
   .login-form-block__form .form__block .form-input {
     margin-bottom: 20px;
   }
+  .login-form-block__form .form__block select.form-input {
+    padding-left: 12px;
+  }
   .login-form-block__form .form__block .form-button {
-    margin: 20px 0;
+    margin: 5px 0;
   }
   .login-form-block__form_register .form-group:not(:last-child) {
     width: 46%;
@@ -704,6 +790,12 @@ html {
   .content .main-files-group .files-list .files-item__preview {
     max-width: 290px;
     padding-bottom: 40px;
+  }
+  .content .main .calendar-block md-toolbar {
+    position: relative;
+    right: 0;
+    margin-bottom: 0;
+    top: 0;
   }
 }
 @media screen and (max-width: 991px) {
@@ -770,12 +862,15 @@ html {
     font-size: 1.5rem;
   }
   .login-form-block__form .form__title {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     margin: 10px 0;
   }
   .login-form-block__form .form__block {
     width: 100%;
     padding: 0 20px;
+  }
+  .login-form-block__form .form__block .form-forgot a {
+    font-size: 1.2rem;
   }
   .login-form-block__form .form__block .form-input {
     font-size: 1.6rem;
@@ -787,7 +882,7 @@ html {
   .login-form-block__form .form__block .form-button {
     font-size: 1.2rem;
     padding: 4px 20px;
-    margin: 10px 0;
+    margin: 2px 0;
     width: 200px;
   }
   .login-form-block__form .form__block .form-button .glyphicon {
@@ -826,14 +921,20 @@ html {
     display: inline-block;
     vertical-align: middle;
   }
+  .content .main .calendar-block md-toolbar {
+    width: 200px;
+  }
+  .content .main .calendar-block md-toolbar .md-toolbar-tools h2 {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 450px) {
   .login-form-block {
     width: 300px;
-    height: 300px;
+    height: 360px;
     top: 50%;
     left: 50%;
-    margin: -150px 0 0 -150px;
+    margin: -180px 0 0 -150px;
   }
   .login-form-block__header .logo {
     height: 75px;
@@ -850,9 +951,17 @@ html {
     width: 100%;
     padding: 0 20px;
   }
+  .login-form-block__form .form__block .form-group {
+    position: relative;
+    text-align: center;
+  }
+  .login-form-block__form .form__block .form-group__checkbox {
+    text-align: center;
+  }
   .login-form-block__form .form__block .form-button {
     width: 150px;
     font-size: 1.2rem;
+    margin: 10px 0;
   }
   .login-form-block__form .form__block .form-button .glyphicon {
     font-size: 1.2rem;

@@ -105,6 +105,11 @@
                                     <input class="form-input" ng-model="loginData.password" type="password" class="form-control" placeholder="Password">
                                     <span class="glyphicon glyphicon-lock" data-target="true"></span>
                                 </div>
+                                <div class="form-forgot">
+                                    <a href="#/">
+                                        Forgot password?
+                                    </a>
+                                </div>
                                 <div class="form-group">
                                     <button class="form-button" ng-click=" loginStatus= !loginStatus ">
                                         Enter
@@ -148,6 +153,16 @@
                                         <option selected>Vic</option>
                                         <option>Some State</option>
                                     </select>
+                                </div>
+
+                                <div class="form-group form-group__checkbox">
+                                    <input type="checkbox" class="form-input__checkbox" id="register-contract"><label for="register-contract"></label>
+                                    <a ng-href="#/">Subscription contract</a>
+                                </div>
+
+                                <div class="form-group form-group__checkbox">
+                                    <input type="checkbox" class="form-input__checkbox" id="register-terms"><label for="register-terms"></label>
+                                    <a ng-href="#/">Terms and conditions</a>
                                 </div>
 
                                 <div class="form-group">
