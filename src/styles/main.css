@@ -737,6 +737,7 @@ html {
 }
 .content .main .calendar-block .flex {
   font-size: 1.3rem;
+  cursor: inherit;
 }
 .content .main .calendar-block .layout-padding,
 .content .main .calendar-block .layout-padding > .flex,
@@ -748,6 +749,43 @@ html {
 .content .main .calendar-block .layout-fill {
   background: none;
   overflow: inherit;
+}
+.content .main .calendar-block .layout-padding {
+  position: relative;
+}
+.content .main .calendar-block .edit-calendar-day {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  line-height: 30px;
+  color: #b5c0cb;
+  cursor: pointer;
+}
+.content .main .calendar-block .edit-calendar-day .glyphicon {
+  font-size: 15px;
+  line-height: 27px;
+}
+.content .main .calendar-block .edit-calendar-day:hover {
+  color: #f26624;
+  transition: .2s;
+}
+.content .main .calendar-block .calendar-day-event {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 4px solid red;
+  line-height: 35px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 .content .main .pagination-block {
   text-align: center;
@@ -844,6 +882,25 @@ html {
   }
   .content .main .block-list .block-item__info {
     max-width: 57%;
+  }
+  .content .main .calendar-block calendar-md md-content > md-content.calendar > :not(:first-child) > * {
+    height: 15vw;
+  }
+  .content .main .calendar-block .edit-calendar-day {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  .content .main .calendar-block .edit-calendar-day .glyphicon {
+    font-size: 10px;
+    line-height: 19px;
+  }
+  .content .main .calendar-block .calendar-day-event {
+    line-height: 15px;
+    font-size: 9px;
+    padding-left: 10px;
   }
 }
 @media screen and (max-width: 768px) {
